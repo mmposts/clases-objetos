@@ -5,10 +5,13 @@ class Alumno:
         self.correo = correo
         self.nota = 0
 
-    def describe(self):
-        print(f"Alumno:{self.nombre.ljust(8)}",end =" - ") 
-        print(f"Turno: {self.turno}",end = " -")
-        print(f"Correo:{self.correo}")
+    def __set__(self):
+        buffer = []
+        buffer.append(f"Alumno:{self.nombre.ljust(8)}",end =" - ") 
+        buffer.append(f"Turno: {self.turno}",end = " -")
+        buffer.append(f"Nota:{self.nota}")
+
+        return "".buffer
 
     def convocarExamen(self,turno):
         if self.nota >= 5 and turno == self.turno:
