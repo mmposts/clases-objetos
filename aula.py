@@ -1,5 +1,5 @@
 import random
-from clases_de_alumnos import Alumno
+# from clases_de_alumnos import Alumno
 
 class Aula:
     def __init__(self):
@@ -17,6 +17,9 @@ class Aula:
             alumno.describe()
 
     def convocarExamen(self,turno): 
+        if not self.profesor:
+            raise Exception(f"No hay profesor disponible.")
+        
         print(f"Profesor: {self.profesor}")      
         for alumno in self.alumnos:
             alumno.convocarExamen(turno)
