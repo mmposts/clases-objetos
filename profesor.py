@@ -36,9 +36,3 @@ class Profesor:
 
     def generar_nota(self) -> float:
         return random.uniform(self.nota_minima, self.nota_maxima)
-        
-     
-
-
-   
-
