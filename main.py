@@ -1,26 +1,30 @@
 # import random
-from alumnos import Alumno
+from alumno import Alumno
 from aula import Aula
 from profesor import Profesor
 
 turnos =["A", "B", "C"] 
-profe = Profesor
-CANT_AULAS = 5
+CANTIDAD =  {
+    "profesor" : 8,
+    "alumnos"  : 30,
+    "aulas"    : 5
+}
 
 aulas = []
-for i in range(CANT_AULAS):
+for i in range(CANTIDAD["aulas"]):
     aulas.append(Aula())
 
 profesores = [
-    Profesor( "Francisco Perez", 0, 10),
-    Profesor("Marta Sanches", 0, 10),
-    Profesor("Enrique Bolaños", 0, 10),
-    Profesor("Franchesca Rivas", 0, 10),
-    Profesor("Miguel Santos", 0, 10),
+    # Profesor( "Francisco Perez", 0, 10),
+    # Profesor("Marta Sanches", 0, 10),
+    # Profesor("Enrique Bolaños", 0, 10),
+    # Profesor("Franchesca Rivas", 0, 10),
+    # Profesor("Miguel Santos", 0, 10),
 ]
-
+for i in range(CANTIDAD["profesor"]):
+    profesores.append(Profesor())
 alumnos = []
-for i in range(20):
+for i in range(CANTIDAD["alumnos"]):
     alumnos.append(Alumno())
 
 aulas[0].set_profesor(profesores[0])
