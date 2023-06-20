@@ -2,13 +2,10 @@
 from alumno import Alumno
 from aula import Aula
 from profesor import Profesor
+from data_user_generator import DataUserGenerator
 
-turnos =["A", "B", "C"] 
-CANTIDAD =  {
-    "profesor" : 8,
-    "alumnos"  : 30,
-    "aulas"    : 5
-}
+turnos = ["A", "B", "C"]
+CANTIDAD = {"profesor": 8, "alumnos": 30, "aulas": 5}
 
 aulas = []
 for i in range(CANTIDAD["aulas"]):
